@@ -4,6 +4,7 @@ import { LoginPage, RegisterPage } from './pages/AuthPages'
 import HomePage    from './pages/HomePage'
 import WatchPage   from './pages/WatchPage'
 import UploadPage  from './pages/UploadPage'
+import ChannelPage from './pages/ChannelPage'
 import useAuthStore from './store/authStore'
 
 function PrivateRoute({ children }) {
@@ -26,8 +27,9 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
 
         {/* 公開 */}
-        <Route path="/"          element={<HomePage />} />
-        <Route path="/watch/:id" element={<WatchPage />} />
+        <Route path="/"              element={<HomePage />} />
+        <Route path="/watch/:id"     element={<WatchPage />} />
+        <Route path="/channel/:id"   element={<ChannelPage />} />
 
         {/* 認証必須 */}
         <Route path="/upload" element={
